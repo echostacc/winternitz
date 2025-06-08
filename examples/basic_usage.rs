@@ -1,5 +1,3 @@
-#[path = "../src/winternitz.rs"]
-mod winternitz;
 use winternitz::Winternitz;
 
 fn main() {
@@ -29,7 +27,7 @@ fn main() {
         println!("    Verification time: {:?}", verify_duration);
         println!("    Signature size: {} components", signature.len());
         println!("    Signature valid: {}", is_valid);
-        
+        `
         if let Some(first_component) = signature.first() {
             println!("    First signature component (hex): {}", 
                 hex::encode(&first_component[..8.min(first_component.len())]));
